@@ -1,5 +1,5 @@
 <?php
-abstract class User extends Table
+class User extends Table
 {
     public $user_id = 0;
     public $lastname = '';

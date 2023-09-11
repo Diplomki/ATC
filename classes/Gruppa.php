@@ -1,5 +1,5 @@
 <?php
-abstract class Gruppa extends Table
+class Gruppa extends Table
 {
     public $gruppa_id = 0;
     public $name = '';

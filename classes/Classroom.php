@@ -1,5 +1,5 @@
 <?php
-abstract class Classrom extends Table
+class Classroom extends Table
 {
     public $classroom_id = 0;
     public $name = '';

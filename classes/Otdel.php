@@ -1,5 +1,5 @@
 <?php
-abstract class Otdel extends Table
+class Otdel extends Table
 {
     public $otdel_id = 0;
     public $name = '';

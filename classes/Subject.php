@@ -1,5 +1,5 @@
 <?php
-abstract class Subject extends Table
+class Subject extends Table
 {
     public $subject_id = 0;
     public $name = '';
