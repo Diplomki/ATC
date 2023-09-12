@@ -8,10 +8,8 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
-    <link rel="stylesheet" href="template/css/bootstrap.min.css">
-    <link rel="stylesheet" href="template/css/fontawesome.min.css">
-    <link rel="stylesheet" href="template/css/ionicons.min.css">
-    <link rel="stylesheet" href="template/css/AdminLTE.min.css">
+
+    <link rel="stylesheet" href="template/css/login.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -25,44 +23,33 @@
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 
-<body class="hold-transition login-page">
-    <div class="login-box">
-        <div class="login-logo">
-            <a href="../../index2.html"><b>Admin</b>LTE</a>
-        </div>
-        <!-- /.login-logo -->
-        <div class="login-box-body">
+<body class="login_class">
+    <div class="wrapper">
+        <div class="form-box login">
             <p class="login-box-msg">
                 <?= $message; ?>
             </p>
-
             <form action="auth.php" method="post">
-                <div class="form-group has-feedback">
-                    <input name="login" type="text" class="form-control" placeholder="Email">
-                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                <div class="input-box"><span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input name="login" type="text" required>
+                    <label>Логин</label>
                 </div>
-                <div class="form-group has-feedback">
-                    <input name="password" type="password" class="form-control" placeholder="Password">
-                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input name="password" type="password" required>
+                    <label>Пароль</label>
                 </div>
-                <!-- /.col -->
-                <div class="col-xs-4">
-                    <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
-                </div>
-                <!-- /.col -->
+                <button type="submit" class="btn">Войти
+
+                </button>
+
+
+            </form>
         </div>
-        </form>
-
-
-
     </div>
-    <!-- /.login-box-body -->
 
-    <!-- /.login-box -->
-
-    <!-- jQuery 3 -->
-    <script src="template/js/jquery.min.js"></script>
-    <script src="template/js/bootstrap.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

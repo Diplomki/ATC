@@ -14,12 +14,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <link rel="stylesheet" href="template/css/bootstrap.min.css">
-
     <link rel="stylesheet" href="template/css/font-awesome.min.css">
-
     <link rel="stylesheet" href="template/css/ionicons.min.css">
     <link rel="stylesheet" href="template/css/AdminLTE.min.css">
-
     <link rel="stylesheet" href="template/css/skins/skin-blue.min.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -61,7 +58,7 @@ desired effect
         <header class="main-header">
 
             <!-- Logo -->
-            <a href="index2.html" class="logo">
+            <a href="#" class="logo">
                 <!-- mini logo for sidebar mini 50x50 pixels -->
                 <span class="logo-mini"><b>Р</b></span>
                 <!-- logo for regular state and mobile devices -->
@@ -91,13 +88,17 @@ desired effect
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <!-- The user image in the navbar-->
                                 <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                                <span class="hidden-xs">Здравствуйте, Кто-то там</span>
+                                <span class="hidden-xs">Здравствуйте,
+                                    <?= $_SESSION['fio'] ?>
+                                </span>
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- The user image in the menu -->
                                 <li class="user-header">
                                     <p>
-                                        Здравствуйте, Кто-то там - Администратор
+                                        Здравствуйте,
+                                        <?= $_SESSION['fio'] ?> -
+                                        <?= $_SESSION['roleName'] ?>
                                     </p>
                                 </li>
                                 <!-- Menu Body -->
@@ -105,10 +106,13 @@ desired effect
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
                                     <div class="pull-left">
-                                        <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                        <a href="#" class="btn btn-default btn-flat">Профиль</a>
                                     </div>
                                     <div class="pull-right">
-                                        <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                        <form method="POST">
+                                            <button type="submit" class="btn btn-default btn-flat"
+                                                name="out">Выход</button>
+                                        </form>
                                     </div>
                                 </li>
                             </ul>
@@ -129,7 +133,7 @@ desired effect
 
                 <!-- /.search form -->
 
-                <?php require_once "menu.php"; ?>
+                <?php require_once "template/menu.php"; ?>
             </section>
             <!-- /.sidebar -->
         </aside>
@@ -137,5 +141,10 @@ desired effect
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
+            <section class="content-header">
 
-        </div>
+
+            </section>
+
+            <!-- Main content -->
+            <section class="content container-fluid">

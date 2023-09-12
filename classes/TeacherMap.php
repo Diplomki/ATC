@@ -1,5 +1,56 @@
 <?php
 
-class TeacherMap extends BaseMap{
-    
+class TeacherMap extends BaseMap
+{
+    function findById($id = null)
+    {
+        if ($id) {
+            $res = $this->db->query("SELECT user_id, otdel_id
+           FROM teacher WHERE user_id = $id");
+            $teacher = $res->fetchObject("Teacher");
+            if ($teacher) {
+
+                return $teacher;
+            }
+        }
+        return new Teacher();
+    }
+    function save($user = User, $teacher = Teacher)
+    {
+        if (
+            $user->validate() && $teacher->validate() && (new
+            UserMap())->save($user)
+        ) {
+            if ($teacher->user_id == 0) {
+                $teacher->user_id = $user->user_id;
+                return $this->insert($teacher);
+            } else {
+                return $this->update($teacher);
+            }
+        }
+        return false;
+    }
+
+    private function insert($teacher = Teacher)
+    {
+        if (
+            $this->db->exec("INSERT INTO teacher(user_id,
+            otdel_id) VALUES($teacher->user_id, $teacher->otdel_id)") == 1
+        ) {
+            return true;
+        }
+
+        return false;
+    }
+
+    private function update($teacher = Teacher)
+    {
+        if (
+            $this->db->exec("UPDATE teacher SET otdel_id =
+            $teacher->otdel_id WHERE user_id=" . $teacher->user_id) == 1
+        ) {
+            return true;
+        }
+        return false;
+    }
 }
