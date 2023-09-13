@@ -22,9 +22,6 @@ class User extends Table
         ) {
             return true;
         }
-
         return false;
-
     }
-
 }

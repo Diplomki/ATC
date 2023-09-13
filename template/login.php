@@ -31,7 +31,7 @@
             </p>
             <form action="auth.php" method="post">
                 <div class="input-box"><span class="icon"><ion-icon name="mail"></ion-icon></span>
-                    <input name="login" type="text" required>
+                    <input name="login" type="text" autocomplete="off" required>
                     <label>Логин</label>
                 </div>
                 <div class="input-box">
