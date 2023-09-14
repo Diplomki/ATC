@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AdminLTE 2 | Log in</title>
+    <title></title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
@@ -26,9 +26,7 @@
 <body class="login_class">
     <div class="wrapper">
         <div class="form-box login">
-            <p class="login-box-msg">
-                <?= $message; ?>
-            </p>
+                <h2>Авторизация</h2>
             <form action="auth.php" method="post">
                 <div class="input-box"><span class="icon"><ion-icon name="mail"></ion-icon></span>
                     <input name="login" type="text" autocomplete="off" required>

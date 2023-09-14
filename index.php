@@ -111,4 +111,4 @@ colspan="3">Отутствует расписание на этот день</td
 <?php
 require_once 'template/footer.php';
 ?>
-?>
+

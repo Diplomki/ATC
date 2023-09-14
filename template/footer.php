@@ -7,12 +7,7 @@
   <!-- /.content-wrapper -->
 
   <!-- Main Footer -->
-  <footer class="main-footer">
-    <!-- To the right -->
-
-    <!-- Default to the left -->
-    <strong>Copyright &copy; 2018 <a href="#">Политехнический Колледж г.Астана</a>.</strong> All rights reserved.
-  </footer>
+  
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
