@@ -26,14 +26,13 @@
 <body class="login_class">
     <div class="wrapper">
         <div class="form-box login">
-                <h2>Авторизация</h2>
+            <h2>Авторизация</h2>
             <form action="auth.php" method="post">
-                <div class="input-box"><span class="icon"><ion-icon name="mail"></ion-icon></span>
+                <div class="input-box">
                     <input name="login" type="text" autocomplete="off" required>
                     <label>Логин</label>
                 </div>
                 <div class="input-box">
-                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
                     <input name="password" type="password" required>
                     <label>Пароль</label>
                 </div>
